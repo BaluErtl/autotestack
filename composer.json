@@ -14,5 +14,15 @@
     },
     "require": {
         "facebook/webdriver": "^1.6"
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "sed -i -e 's/2.48.2/3.12.0/g' vendor/peridot-php/webdriver-manager/src/Versions.php",
+            "sed -i -e 's/2.19/2.38/g' vendor/peridot-php/webdriver-manager/src/Versions.php"
+        ],
+        "post-install-cmd": [
+            "sed -i -e 's/2.48.2/3.12.0/g' vendor/peridot-php/webdriver-manager/src/Versions.php",
+            "sed -i -e 's/2.19/2.38/g' vendor/peridot-php/webdriver-manager/src/Versions.php"
+        ]
     }
 }
