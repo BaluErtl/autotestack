@@ -1,0 +1,1 @@
+Initial foundation of this stack was based on the toolset introduced in the [Behat 101 - Introduction](https://www.youtube.com/watch?v=j7RHtNePY3Y) screencast by @jcowie and @allanmacgregor on YouTube. I'm so thankful for them to shed some lights on a working combination.
