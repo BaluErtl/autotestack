@@ -1,0 +1,18 @@
+{
+    "require-dev": {
+        "behat/behat": "^3.4",
+        "behat/mink": "^1.7",
+        "behat/mink-extension": "~2.0.0",
+        "behat/mink-goutte-driver": "~1.1.0",
+        "behat/mink-selenium2-driver": "*",
+        "peridot-php/webdriver-manager": "dev-master",
+        "bossa/phpspec2-expect": "1.*",
+        "phpunit/phpunit": "^6.3"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "require": {
+        "facebook/webdriver": "^1.6"
+    }
+}
