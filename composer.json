@@ -1,19 +1,27 @@
 {
+    "name": "baluertl/autotestack",
+    "description": "A proven working software stack for running automated tests with the following order of components: Gherkin ▸ Behat ▸ Mink ▸ Selenium ▸ WebDriver ▸ Facebook's PHP-binding ▸ ChromeDriver ▸ Google Chrome ▸ on mac OS.",
+    "type": "project",
+    "license": "GPL-3.0",
+    "authors": {
+        "name": "Balu Ertl",
+        "email": "write.me@baluertl.com",
+        "homepage": "http://baluertl.com/",
+        "role": "Developer"
+    },
     "require-dev": {
         "behat/behat": "^3.4",
         "behat/mink": "^1.7",
         "behat/mink-extension": "~2.0.0",
         "behat/mink-goutte-driver": "~1.1.0",
         "behat/mink-selenium2-driver": "*",
+        "facebook/webdriver": "^1.6",
         "peridot-php/webdriver-manager": "dev-master",
         "bossa/phpspec2-expect": "1.*",
         "phpunit/phpunit": "^6.3"
     },
     "config": {
         "bin-dir": "bin"
-    },
-    "require": {
-        "facebook/webdriver": "^1.6"
     },
     "scripts": {
         "post-update-cmd": [
