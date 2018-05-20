@@ -3,12 +3,23 @@
     "description": "A proven working software stack for running automated tests with the following order of components: Gherkin ▸ Behat ▸ Mink ▸ Selenium ▸ WebDriver ▸ Facebook's PHP-binding ▸ ChromeDriver ▸ Google Chrome ▸ on mac OS.",
     "type": "project",
     "license": "GPL-3.0",
+<<<<<<< HEAD
     "authors": {
         "name": "Balu Ertl",
         "email": "write.me@baluertl.com",
         "homepage": "http://baluertl.com/",
         "role": "Developer"
     },
+=======
+    "authors": [
+        {
+            "name": "Balu Ertl",
+            "email": "write.me@baluertl.com",
+            "homepage": "http://baluertl.com/",
+            "role": "Developer"
+        }
+    ],
+>>>>>>> Extend composer.json file with fields mandatory for Packagist.
     "require-dev": {
         "behat/behat": "^3.4",
         "behat/mink": "^1.7",
