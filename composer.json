@@ -2,7 +2,7 @@
     "name": "baluertl/autotestack",
     "description": "A proven working software stack for running automated tests with the following order of components: Gherkin ▸ Behat ▸ Mink ▸ Selenium ▸ WebDriver ▸ Facebook's PHP-binding ▸ ChromeDriver ▸ Google Chrome ▸ on mac OS.",
     "type": "project",
-    "license": "GPL-3.0",
+    "license": "GPL-3.0-or-later",
     "authors": [
         {
             "name": "Balu Ertl",
