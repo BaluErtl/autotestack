@@ -1,0 +1,7 @@
+#!/bin/bash
+
+## Description: Run Behat tests
+## Usage: behat [options]
+## Example: "ddev behat" or "ddev behat features/search.feature"
+
+bin/behat --config=behat.ddev.yml "$@"

@@ -1,0 +1,23 @@
+name: autotestack
+type: php
+docroot: ""
+php_version: "8.4"
+webserver_type: nginx-fpm
+xdebug_enabled: false
+additional_hostnames: []
+additional_fqdns: []
+database:
+  type: mariadb
+  version: "10.11"
+use_dns_when_possible: true
+composer_version: "2"
+web_environment: []
+
+# Hooks for post-start
+hooks:
+  post-start:
+    - exec: composer install
+
+# PHP configuration
+php_ini:
+  memory_limit: 512M

@@ -10,13 +10,29 @@ This is a PHP-based project configured to run browser automation tests, with a s
 
 ## Development Setup
 
-### Prerequisites
-- PHP (with Composer)
+### Option 1: DDEV (Recommended)
+
+DDEV provides a complete containerized development environment with Selenium pre-configured.
+
+```bash
+# Start DDEV
+ddev start
+
+# Run tests
+ddev behat
+```
+
+See `.ddev/README.md` for detailed DDEV usage.
+
+### Option 2: Local Setup
+
+#### Prerequisites
+- PHP 8.4+ (with Composer)
 - Selenium Server running on `localhost:4444`
 - ChromeDriver
 - Google Chrome browser
 
-### Installation
+#### Installation
 ```bash
 composer install
 ```
@@ -25,18 +41,27 @@ composer install
 
 ## Running Tests
 
-### Run all Behat tests
+### With DDEV
 ```bash
+# Run all tests
+ddev behat
+
+# Run specific feature
+ddev behat features/search.feature
+
+# Run with tags
+ddev behat --tags=@tagname
+```
+
+### Without DDEV (Local)
+```bash
+# Run all tests
 bin/behat
-```
 
-### Run specific feature file
-```bash
+# Run specific feature
 bin/behat features/search.feature
-```
 
-### Run with specific tags (if defined)
-```bash
+# Run with tags
 bin/behat --tags=@tagname
 ```
 
