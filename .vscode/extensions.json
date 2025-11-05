@@ -1,0 +1,29 @@
+{
+    "recommendations": [
+        // PHP support
+        "bmewburn.vscode-intelephense-client",
+        "xdebug.php-debug",
+
+        // Composer
+        "ikappas.composer",
+
+        // Behat/Gherkin
+        "alexkrechik.cucumberautocomplete",
+        "stevejpurves.cucumber",
+
+        // Testing
+        "recca0120.vscode-phpunit",
+
+        // Git
+        "eamodio.gitlens",
+
+        // YAML support
+        "redhat.vscode-yaml",
+
+        // EditorConfig
+        "editorconfig.editorconfig",
+
+        // Docker (for DDEV)
+        "ms-azuretools.vscode-docker"
+    ]
+}
