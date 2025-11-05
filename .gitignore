@@ -2,3 +2,15 @@ bin/
 vendor/
 Test automation.odf.pdf
 .DS_Store
+
+# DDEV
+.ddev/.gitignore
+.ddev/*-build
+.ddev/.*.yaml
+.ddev/import-db/
+.ddev/db_snapshots/
+.ddev/.ddev-docker-compose-*
+.ddev/config.*.yaml
+.ddev/.global_commands/
+.ddev/.homeadditions/
+.ddev/.ssh-agent-socket

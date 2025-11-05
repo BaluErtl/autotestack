@@ -1,0 +1,129 @@
+{
+    "folders": [
+        {
+            "path": "/Users/baluertl/Repos/autotestack",
+            "name": "autotestack"
+        }
+    ],
+    "settings": {
+        "php.validate.executablePath": "/usr/bin/php",
+        "php.suggest.basic": true,
+        "php.format.enable": true,
+
+        "files.associations": {
+            "*.feature": "cucumber",
+            "behat.yml": "yaml",
+            "behat.*.yml": "yaml"
+        },
+
+        "files.exclude": {
+            "**/.git": true,
+            "**/vendor": true,
+            "**/bin": true
+        },
+
+        "search.exclude": {
+            "**/vendor": true,
+            "**/bin": true,
+            "**/composer.lock": true
+        },
+
+        "editor.formatOnSave": false,
+        "editor.insertSpaces": true,
+        "editor.tabSize": 4,
+
+        "[php]": {
+            "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+            "editor.formatOnSave": true,
+            "editor.tabSize": 4
+        },
+
+        "[yaml]": {
+            "editor.insertSpaces": true,
+            "editor.tabSize": 2
+        },
+
+        "[feature]": {
+            "editor.insertSpaces": true,
+            "editor.tabSize": 2
+        },
+
+        "composer.enabled": true,
+        "composer.executablePath": "composer",
+
+        "terminal.integrated.defaultProfile.osx": "bash",
+
+        "git.ignoreLimitWarning": true
+    },
+    "extensions": {
+        "recommendations": [
+            "bmewburn.vscode-intelephense-client",
+            "xdebug.php-debug",
+            "ikappas.composer",
+            "alexkrechik.cucumberautocomplete",
+            "stevejpurves.cucumber",
+            "recca0120.vscode-phpunit",
+            "eamodio.gitlens",
+            "redhat.vscode-yaml",
+            "editorconfig.editorconfig",
+            "ms-azuretools.vscode-docker"
+        ]
+    },
+    "launch": {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "Listen for Xdebug",
+                "type": "php",
+                "request": "launch",
+                "port": 9003,
+                "pathMappings": {
+                    "/var/www/html": "${workspaceFolder}"
+                }
+            },
+            {
+                "name": "Debug Behat Tests",
+                "type": "php",
+                "request": "launch",
+                "program": "${workspaceFolder}/bin/behat",
+                "cwd": "${workspaceFolder}",
+                "port": 9003
+            }
+        ]
+    },
+    "tasks": {
+        "version": "2.0.0",
+        "tasks": [
+            {
+                "label": "Behat: Run All Tests",
+                "type": "shell",
+                "command": "bin/behat",
+                "group": {
+                    "kind": "test",
+                    "isDefault": true
+                }
+            },
+            {
+                "label": "DDEV: Start",
+                "type": "shell",
+                "command": "ddev start"
+            },
+            {
+                "label": "DDEV: Run Behat Tests",
+                "type": "shell",
+                "command": "ddev behat",
+                "group": "test"
+            },
+            {
+                "label": "Composer: Install",
+                "type": "shell",
+                "command": "composer install"
+            },
+            {
+                "label": "Composer: Normalize",
+                "type": "shell",
+                "command": "composer normalize"
+            }
+        ]
+    }
+}

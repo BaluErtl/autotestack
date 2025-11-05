@@ -1,0 +1,61 @@
+{
+    "php.validate.executablePath": "/usr/bin/php",
+    "php.suggest.basic": true,
+
+    // PHP formatting
+    "php.format.enable": true,
+
+    // File associations
+    "files.associations": {
+        "*.feature": "cucumber",
+        "behat.yml": "yaml",
+        "behat.*.yml": "yaml"
+    },
+
+    // Exclude patterns
+    "files.exclude": {
+        "**/.git": true,
+        "**/vendor": true,
+        "**/bin": true
+    },
+
+    "search.exclude": {
+        "**/vendor": true,
+        "**/bin": true,
+        "**/composer.lock": true
+    },
+
+    // Editor settings
+    "editor.formatOnSave": false,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+
+    // PHP specific
+    "[php]": {
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 4
+    },
+
+    // YAML specific
+    "[yaml]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2
+    },
+
+    // Gherkin/Cucumber
+    "[feature]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2
+    },
+
+    // Composer
+    "composer.enabled": true,
+    "composer.executablePath": "composer",
+
+    // Terminal
+    "terminal.integrated.defaultProfile.osx": "bash",
+
+    // Git
+    "git.ignoreLimitWarning": true
+}

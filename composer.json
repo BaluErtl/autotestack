@@ -1,8 +1,8 @@
 {
     "name": "baluertl/autotestack",
     "description": "A proven working software stack for running automated tests with the following order of components: Gherkin ▸ Behat ▸ Mink ▸ Selenium ▸ WebDriver ▸ Facebook's PHP-binding ▸ ChromeDriver ▸ Google Chrome ▸ on mac OS.",
-    "type": "project",
     "license": "GPL-3.0-or-later",
+    "type": "project",
     "authors": [
         {
             "name": "Balu Ertl",
@@ -17,20 +17,24 @@
         "behat/mink-extension": "~2.0.0",
         "behat/mink-goutte-driver": "~1.1.0",
         "behat/mink-selenium2-driver": "*",
-        "facebook/webdriver": "^1.6",
+        "bossa/phpspec2-expect": "^1.0",
+        "ergebnis/composer-normalize": "^2.48",
         "peridot-php/webdriver-manager": "dev-master",
-        "bossa/phpspec2-expect": "1.*",
-        "phpunit/phpunit": "^6.3"
+        "php-webdriver/webdriver": "^1.15",
+        "phpunit/phpunit": "^10.0"
     },
     "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true
+        },
         "bin-dir": "bin"
     },
     "scripts": {
-        "post-update-cmd": [
+        "post-install-cmd": [
             "sed -i -e 's/2.48.2/3.12.0/g' vendor/peridot-php/webdriver-manager/src/Versions.php",
             "sed -i -e 's/2.19/2.38/g' vendor/peridot-php/webdriver-manager/src/Versions.php"
         ],
-        "post-install-cmd": [
+        "post-update-cmd": [
             "sed -i -e 's/2.48.2/3.12.0/g' vendor/peridot-php/webdriver-manager/src/Versions.php",
             "sed -i -e 's/2.19/2.38/g' vendor/peridot-php/webdriver-manager/src/Versions.php"
         ]
